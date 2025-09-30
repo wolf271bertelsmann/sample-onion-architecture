@@ -6,7 +6,7 @@ import model.Order;
 import port.in.CreateOrderUseCase;
 import port.in.DeleteOrderUseCase;
 import port.in.FindOrderUseCase;
-import port.exceptions.OrderNotFoundException;
+import model.OrderNotFoundException;
 import port.in.UpdateOrderUseCase;
 import port.out.OrderRepository;
 

@@ -1,7 +1,7 @@
 package port.out;
 
 import model.Order;
-import port.exceptions.OrderNotFoundException;
+import model.OrderNotFoundException;
 
 public interface OrderRepository {
 	void save(Order order);

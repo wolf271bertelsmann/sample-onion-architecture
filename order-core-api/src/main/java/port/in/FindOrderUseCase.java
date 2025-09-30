@@ -1,6 +1,6 @@
 package port.in;
 
-import port.exceptions.OrderNotFoundException;
+import model.OrderNotFoundException;
 
 public interface FindOrderUseCase {
 	String  findOrder(String orderId) throws OrderNotFoundException;

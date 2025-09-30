@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import model.Order;
-import port.exceptions.OrderNotFoundException;
+import model.OrderNotFoundException;
 import port.out.OrderRepository;
 
 public class InMemoryOrderRepository implements OrderRepository {

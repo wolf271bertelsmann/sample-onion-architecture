@@ -10,7 +10,8 @@ public class OrderCreateController {
 		this.createOrderUseCase = ServiceLoader.load(CreateOrderUseCase.class).findFirst().orElseThrow(IllegalStateException::new);
 	}
 
-	public void handleRequest(String id, String product) {
+	public String handleRequest(String id, String product) {
 		createOrderUseCase.createOrder(id, product);
+		return "Order created";
 	}
 }
