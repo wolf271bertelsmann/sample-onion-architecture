@@ -10,6 +10,7 @@
 		<module>order-adapter-persistence</module>
 		<module>order-adapter-web</module>
 		<module>order-app</module>
+		<module>order-core-delegate</module>
 	</modules>
 	<version>1.0-SNAPSHOT</version>
 

@@ -23,17 +23,51 @@
 			<artifactId>order-adapter-web</artifactId>
 			<version>1.0-SNAPSHOT</version>
 		</dependency>
-		<dependency>
-			<groupId>wolf271bertelsmann</groupId>
-			<artifactId>order-core-impl</artifactId>
-			<version>1.0-SNAPSHOT</version>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-			<groupId>wolf271bertelsmann</groupId>
-			<artifactId>order-adapter-persistence</artifactId>
-			<version>1.0-SNAPSHOT</version>
-			<scope>runtime</scope>
-		</dependency>
 	</dependencies>
+
+	<profiles>
+		<profile>
+			<id>direct-calls-with-inMemory-repo-profile</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<dependencies>
+				<dependency>
+					<groupId>wolf271bertelsmann</groupId>
+					<artifactId>order-core-impl</artifactId>
+					<version>1.0-SNAPSHOT</version>
+					<scope>runtime</scope>
+				</dependency>
+				<dependency>
+					<groupId>wolf271bertelsmann</groupId>
+					<artifactId>order-adapter-persistence</artifactId>
+					<version>1.0-SNAPSHOT</version>
+					<scope>runtime</scope>
+				</dependency>
+			</dependencies>
+		</profile>
+		<profile>
+			<id>delegate-calls-with-inMemory-profile</id>
+			<dependencies>
+				<dependency>
+					<groupId>wolf271bertelsmann</groupId>
+					<artifactId>order-core-delegate</artifactId>
+					<version>1.0-SNAPSHOT</version>
+					<scope>runtime</scope>
+				</dependency>
+				<dependency>
+					<groupId>wolf271bertelsmann</groupId>
+					<artifactId>order-core-impl</artifactId>
+					<version>1.0-SNAPSHOT</version>
+					<scope>runtime</scope>
+				</dependency>
+				<dependency>
+					<groupId>wolf271bertelsmann</groupId>
+					<artifactId>order-adapter-persistence</artifactId>
+					<version>1.0-SNAPSHOT</version>
+					<scope>runtime</scope>
+				</dependency>
+			</dependencies>
+		</profile>
+	</profiles>
 </project>
