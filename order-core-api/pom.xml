@@ -10,7 +10,7 @@
 	<artifactId>order-core-api</artifactId>
 	<packaging>jar</packaging>
 
-	<name>order-core-impl</name>
+	<name>order-core-api</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
